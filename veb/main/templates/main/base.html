@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock%}</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+<body>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">Просто сайт</h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+        <a class="p-3 mb-2 bg-success text-white" href="{% url 'home'%}">Страничка</a>
+        <a class="p-3 mb-2 bg-primary text-white" href="{% url 'second'%}">Вторая страничка</a>
+        <a class="p-3 mb-2 bg-secondary text-white" href="{% url 'create'%}">Третья страничка</a>
+        <a class="p-3 mb-2 bg-warning text-dark" href="{% url 'four'%}">Четвертая страничка</a>
+    </nav>
+</div>
+<div class="container">
+{% block content %}{% endblock%}
+</div>
+</body>
+</html>
